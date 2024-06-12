@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="icon" href="Imagenes/Logo-fabicon.jpg" />
+    <title>Aula/Salon Nuevo</title>
+  </head>
+
+  <body class="bodyTabla">
+    <div>
+      
+      <header>
+        <div class="logo">
+            <img src="./Imagenes/logo1.png" alt="Logo de la radio">
+        </div>
+        <div class="title">
+            <h1>Tarifario de Ambientes</h1>
+        </div>
+        <div class="radio">
+
+            <div class="icon-radio">
+            <span><i class="bi bi-broadcast"></i></span>
+            </div>
+
+            <div class="texto">
+            <span class="frequency">AM 620</span>
+            <span class="frequency">FM 98.2</span>
+            <span class="slogan">"La voz del pueblo aymara"</span>
+            </div>
+        </div>
+      </header>
+
+      <h2>Aula/Salon Nuevo</h2>
+
+        <div class="btn-volver">
+          <a href="./index.html">VOLVER</a>
+        </div>
+      <div class="tabla-container">
+        <table border="2" class="Tabla">
+          <thead>
+            <tr>
+              <td rowspan="2" class="columnDetalle">INSTITUCIONES</td>
+              <td rowspan="2">ACTIVIDAD</td>
+              <td colspan="2">COSTO BS</td>
+              <td rowspan="2">TIEMPO</td>
+            </tr>
+    
+            <tr>
+              <td colspan="1">Lunes a Viernes</td>
+              <td colspan="1">Sabado a Domingo </td>
+            </tr>
+          </thead>
+    
+          <tbody>
+            <tr>
+              <td class="align-left">Instituciones Publicas/Privadas</td>
+              <td>Capacitaciones/ reunión</td>
+              <td>150,00</td>
+              <td>200,00</td>
+              <td>2 hora</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="list">
+        <div class="item">
+          <img src="./Imagenes/Aulas1.JPG" alt="teatro1" />
+          <div class="content">
+            <!-- <div class="title">Teatro San Gabrie</div> -->
+            <!-- <div class="type">Descripcion</div> -->
+            <!-- <div class="description">
+             
+            </div> -->
+            <!-- <div class="button">
+              <button>VER MAS</button>
+            </div> -->
+          </div>
+        </div>
+        <div class="item">
+          <img src="./Imagenes/Aulas2.JPG" alt="teatro2" />
+          <div class="content">
+            <!-- <div class="title">Teatro San Gabrie</div> -->
+            <!-- <div class="type">Descripcion</div> -->
+            <!-- <div class="description">
+              
+            </div> -->
+            <!-- <div class="button">
+              <button>VER MAS</button>
+            </div> -->
+          </div>
+        </div>
+        <div class="item">
+          <img src="./Imagenes/Aulas3.JPG" alt="teatro3" />
+          <div class="content">
+            <!-- <div class="title">Teatro San Gabrie</div> -->
+            <!-- <div class="type">Descripcion</div> -->
+            <!-- <div class="description">
+              
+            </div> -->
+            <!-- <div class="button">
+              <button>VER MAS</button>
+            </div> -->
+          </div>
+        </div>
+        <div class="item">
+          <img src="./Imagenes/Aulas4.JPG" alt="teatro4" />
+          <div class="content">
+            <!-- <div class="title">Teatro San Gabrie</div> -->
+            <!-- <div class="type">Descripcion</div> -->
+            <!-- <div class="description">
+              
+            </div> -->
+            <!-- <div class="button">
+              <button>VER MAS</button>
+            </div> -->
+          </div>
+        </div>
+        <div class="item">
+          <img src="./Imagenes/Aulas5.JPG" alt="teatro5" />
+          <div class="content">
+            <!-- <div class="title">Teatro San Gabrie</div> -->
+            <!-- <div class="type">Descripcion</div> -->
+            <!-- <div class="description">
+              
+            </div> -->
+            <!-- <div class="button">
+              <button>VER MAS</button>
+            </div> -->
+          </div>
+        </div>
+        
+      </div>
+      <div class="thumbnail">
+        <div class="item">
+          <img src="./Imagenes/Aulas1.JPG" alt="Aulas1" />
+        </div>
+        <div class="item">
+          <img src="./Imagenes/Aulas2.JPG" alt="Aulas2" />
+        </div>
+        <div class="item">
+          <img src="./Imagenes/Aulas3.JPG" alt="Aulas3" />
+        </div>
+        <div class="item">
+          <img src="./Imagenes/Aulas4.JPG" alt="Aulas4" />
+        </div>
+        <div class="item">
+          <img src="./Imagenes/Aulas5.JPG" alt="Aulas5" />
+        </div>
+        
+      </div>
+      <div class="nextPrevArrows">
+        <button class="prev"><</button>
+        <button class="next">></button>
+      </div>
+    </div>
+
+    <script>
+      let nextBtn = document.querySelector(".next");
+      let prevBtn = document.querySelector(".prev");
+
+      let slider = document.querySelector(".slider");
+      let sliderList = slider.querySelector(".slider .list");
+      let thumbnail = document.querySelector(".slider .thumbnail");
+      let thumbnailItems = thumbnail.querySelectorAll(".item");
+
+      thumbnail.appendChild(thumbnailItems[0]);
+
+      // Function for next button
+      nextBtn.onclick = function () {
+        moveSlider("next");
+      };
+
+      // Function for prev button
+      prevBtn.onclick = function () {
+        moveSlider("prev");
+      };
+
+      function moveSlider(direction) {
+        let sliderItems = sliderList.querySelectorAll(".item");
+        let thumbnailItems = document.querySelectorAll(".thumbnail .item");
+
+        if (direction === "next") {
+          sliderList.appendChild(sliderItems[0]);
+          thumbnail.appendChild(thumbnailItems[0]);
+          slider.classList.add("next");
+        } else {
+          sliderList.prepend(sliderItems[sliderItems.length - 1]);
+          thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1]);
+          slider.classList.add("prev");
+        }
+
+        slider.addEventListener(
+          "animationend",
+          function () {
+            if (direction === "next") {
+              slider.classList.remove("next");
+            } else {
+              slider.classList.remove("prev");
+            }
+          },
+          { once: true }
+        ); // Remove the event listener after it's triggered once
+      }
+
+      // Add click event to each thumbnail
+      thumbnailItems.forEach((item, index) => {
+        item.onclick = function () {
+          moveToIndex(index);
+        };
+      });
+
+      function moveToIndex(index) {
+        let currentIndex = Array.from(sliderList.children).findIndex(
+          (item) => item === sliderList.querySelector(".item")
+        );
+        let sliderItems = Array.from(sliderList.children);
+        let difference = index - currentIndex;
+
+        if (difference > 0) {
+          for (let i = 0; i < difference; i++) {
+            sliderList.appendChild(sliderItems[0]);
+          }
+        } else if (difference < 0) {
+          for (let i = difference; i < 0; i++) {
+            sliderList.prepend(sliderItems[sliderItems.length - 1]);
+          }
+        }
+      }
+    </script>
+
+    <footer>
+      <p>Dirección del lugar: Av. Bolivia Nro. 100, Zona/Barrio comunidad Charapaqui Collpani - Villa Adela</p> 
+      <p>Redes sociales:
+          <a href="https://wa.link/ujf9wk"><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.facebook.com/radiosangabrieldebolivia"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/radiosangabrielbolivia2/"><i class="bi bi-instagram"></i></a>
+          <a href="https://twitter.com/RadioSanGabrie1"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.youtube.com/@RadioSanGabrielBolivia"><i class="bi bi-youtube"></i></a>
+      </p>    
+      <p>Telefono: 2832544</p>  
+      <p>Páginas:
+          <a href="https://www.radiosangabriel.org.bo/radio_vivo.php" target="_blank">Radio San Gabriel de Bolivia AM 620</a><br>
+          <a href="https://www.radiosangabriel.org.bo/radiofm_vivo.php" target="_blank">Radio San Gabriel FM 98.2</a>
+      </p>       
+      <p>Cel: 69702895</p>      
+      <p class="nombre_radio">Copyright &copy; 2024 Radio "San Gabriel"</p>
+      
+    </footer>
+  </body>
+</html>
