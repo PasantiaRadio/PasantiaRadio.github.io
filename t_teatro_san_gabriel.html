@@ -199,13 +199,14 @@
 
     <div class="slider">
       <div class="list">
-        <div class="item">
+        <div class="item" id="item1">
           <img src="./Imagenes/teatro1.jpg" alt="teatro1" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
             <!-- <div class="type">Descripcion</div> -->
             <div class="description">
-              <p>INCLUYE <br />
+              <p>
+                INCLUYE <br />
                  SONIDO BASICO<br />
                  LUCES LED BLANCAS <br />
                  786 BUTACAS<br />
@@ -215,14 +216,15 @@
                  1 MANTEL BLANCO<br />
                  1 MESA GRANDE <br />
                  49 SILLAS, ESCENARIO<br />
-                 GRADERIAS DE 3 NIVELES.</p>
+                 GRADERIAS DE 3 NIVELES.
+              </p>
             </div>
             <!-- <div class="button">
               <button>VER MAS</button>
             </div> -->
           </div>
         </div>
-        <div class="item">
+        <div class="item" id="item2">
           <img src="./Imagenes/teatro6.jpg" alt="teatro2" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
@@ -245,7 +247,7 @@
             </div> -->
           </div>
         </div>
-        <div class="item">
+        <div class="item" id="item3">
           <img src="./Imagenes/teatro7.jpg" alt="teatro3" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
@@ -270,7 +272,7 @@
             </div> -->
           </div>
         </div>
-        <div class="item">
+        <div class="item" id="item4">
           <img src="./Imagenes/teatro8.jpg" alt="teatro4" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
@@ -293,7 +295,7 @@
             </div> -->
           </div>
         </div>
-        <div class="item">
+        <div class="item" id="item5">
           <img src="./Imagenes/teatro9.jpg" alt="teatro5" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
@@ -318,7 +320,7 @@
             </div> -->
           </div>
         </div>
-        <div class="item">
+        <div class="item" id="item6">
           <img src="./Imagenes/teatro10.jpg" alt="teatro6" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
@@ -343,7 +345,7 @@
             </div> -->
           </div>
         </div>
-        <div class="item">
+        <div class="item" id="item7">
           <img src="./Imagenes/teatro14.jpg" alt="teatro14" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
@@ -368,7 +370,7 @@
             </div> -->
           </div>
         </div>
-        <div class="item">
+        <div class="item" id="item8">
           <img src="./Imagenes/teatro4.jpg" alt="teatro4" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
@@ -393,7 +395,7 @@
             </div> -->
           </div>
         </div>
-        <div class="item">
+        <div class="item" id="item9">
           <img src="./Imagenes/teatro12.jpg" alt="teatro12" />
           <div class="content">
             <!-- <div class="title">Teatro San Gabrie</div> -->
@@ -418,7 +420,6 @@
             </div> -->
           </div>
         </div>
-        
       </div>
       <div class="thumbnail">
         <div class="item">
@@ -568,4 +569,17 @@
       <p class="nombre_radio">Copyright &copy; 2024 Radio "San Gabriel"</p>
     </footer>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".slider .item");
+
+      items.forEach((item) => {
+        const img = item.querySelector("img");
+
+        img.onerror = function () {
+          item.style.display = "none";
+        };
+      });
+    });
+  </script>
 </html>
