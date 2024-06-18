@@ -292,5 +292,17 @@
       <p class="nombre_radio">Copyright &copy; 2024 Radio "San Gabriel"</p>
       
     </footer>
-  </body>
+  </body><script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".slider .item");
+
+      items.forEach((item) => {
+        const img = item.querySelector("img");
+
+        img.onerror = function () {
+          item.remove();
+        };
+      });
+    });
+  </script>
 </html>
