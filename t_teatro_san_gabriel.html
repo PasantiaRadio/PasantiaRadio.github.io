@@ -577,7 +577,7 @@
         const img = item.querySelector("img");
 
         img.onerror = function () {
-          item.style.display = "none";
+          item.remove();
         };
       });
     });
